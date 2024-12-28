@@ -9,6 +9,7 @@ import java.util.List;
 
 public class ExerciseDataUploader {
 
+    //class to upload the global list of predefined exercise in the app
     public void uploadExercises() {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -60,7 +61,7 @@ public class ExerciseDataUploader {
 
         // Upload each exercise to Firebase
         for (Exercise exercise : exercises) {
-            // Generate a unique ID for the exercise
+            // Generate a unique ID for the exercise as exerciseId
             DatabaseReference newExerciseRef = exercisesRef.push();
             String exerciseId = newExerciseRef.getKey();  // Get the unique key
 
