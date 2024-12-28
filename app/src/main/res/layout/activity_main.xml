@@ -13,6 +13,7 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Select a Category"
@@ -72,6 +73,10 @@
             android:layout_margin="8dp"
             android:text="Today Activity" />
     </LinearLayout>
+=======
+        android:layout_centerInParent="true"
+        android:text="Home" />
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

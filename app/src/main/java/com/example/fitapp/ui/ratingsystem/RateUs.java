@@ -1,6 +1,7 @@
 package com.example.fitapp.ui.ratingsystem;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -18,12 +19,20 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import com.example.fitapp.javahelperfile.ratingsystem.Feedback;
 import com.example.fitapp.ui.admin.AdminFeatures;
 import com.example.fitapp.ui.admin.ViewFeedback;
+=======
+import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 import com.example.fitapp.ui.analytics.Analytics;
 import com.example.fitapp.ui.home.MainActivity;
 import com.example.fitapp.R;
 import com.example.fitapp.javahelperfile.profile.User;
 import com.example.fitapp.ui.profile.Profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+<<<<<<< HEAD
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -31,14 +40,19 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 
 public class RateUs extends AppCompatActivity {
 
     private User user;
 
+<<<<<<< HEAD
     // Firebase Database reference
     private DatabaseReference databaseReference;
 
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +92,7 @@ public class RateUs extends AppCompatActivity {
             }
             return false;
         });
+<<<<<<< HEAD
 
         // Upper Toolbar
         Toolbar toolbar = findViewById(R.id.toolbarRateUs);
@@ -149,6 +164,9 @@ public class RateUs extends AppCompatActivity {
         return dateFormat.format(new Date());
     }
 
+=======
+    }
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

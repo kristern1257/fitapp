@@ -9,7 +9,10 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+<<<<<<< HEAD
 import android.widget.RelativeLayout;
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -17,8 +20,11 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+<<<<<<< HEAD
 import com.example.fitapp.ui.admin.AdminFeatures;
 import com.example.fitapp.ui.admin.AdminProfile;
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 import com.example.fitapp.ui.analytics.Analytics;
 import com.example.fitapp.ui.home.MainActivity;
 import com.example.fitapp.R;
@@ -40,7 +46,10 @@ public class EditProfile extends AppCompatActivity {
     private EditText username, dob, phone;
 
     private User user;
+<<<<<<< HEAD
     private boolean isAdmin;
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +58,11 @@ public class EditProfile extends AppCompatActivity {
 
         // Retrieve the User object
         user = getIntent().getParcelableExtra("user");
+<<<<<<< HEAD
         // Check if the user is an admin
         isAdmin = getIntent().getBooleanExtra("isAdmin", false);
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 
         if (user != null) {
             // Populate the fields with user information
@@ -79,6 +91,7 @@ public class EditProfile extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.bottom_profile);
 
+<<<<<<< HEAD
         if (isAdmin) {
             // Change BottomNavigationMenu background color to purple
             bottomNavigationView.setBackgroundColor(getResources().getColor(R.color.purple)); // Replace with your purple color resource
@@ -93,16 +106,22 @@ public class EditProfile extends AppCompatActivity {
             rootLayout.setBackgroundResource(R.drawable.profilebackground); // Default user background
         }
 
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
         bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.bottom_home) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.putExtra("user", user);
+<<<<<<< HEAD
                 intent.putExtra("isAdmin", isAdmin);
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;
             } else if (item.getItemId() == R.id.bottom_analytics) {
+<<<<<<< HEAD
                 Intent intent;
                 if (isAdmin) {
                     // Navigate to AdminFeatures for admin users
@@ -112,10 +131,14 @@ public class EditProfile extends AppCompatActivity {
                     intent = new Intent(getApplicationContext(), Analytics.class);
                 }
                 intent.putExtra("isAdmin", isAdmin); // Pass the isAdmin flag
+=======
+                Intent intent = new Intent(getApplicationContext(), Analytics.class);
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
                 intent.putExtra("user", user); // Attach the Parcelable User object
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
+<<<<<<< HEAD
                 return true;
             } else if (item.getItemId() == R.id.bottom_profile) {
                 Intent intent;
@@ -127,6 +150,10 @@ public class EditProfile extends AppCompatActivity {
                     intent = new Intent(getApplicationContext(), Profile.class);
                 }
                 intent.putExtra("isAdmin", isAdmin); // Pass the isAdmin flag
+=======
+            } else if (item.getItemId() == R.id.bottom_profile) {
+                Intent intent = new Intent(getApplicationContext(), Profile.class);
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
                 intent.putExtra("user", user); // Attach the Parcelable User object
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -299,6 +326,7 @@ public class EditProfile extends AppCompatActivity {
         user.setDob(newDob);
         user.setPhone(newPhone);
         Toast.makeText(this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
         // Check if the user is an admin and navigate accordingly
         Intent intent;
         if (isAdmin) {
@@ -308,6 +336,10 @@ public class EditProfile extends AppCompatActivity {
         }
         intent.putExtra("user", user);
         intent.putExtra("isAdmin", isAdmin);
+=======
+        Intent intent = new Intent(EditProfile.this, Profile.class);
+        intent.putExtra("user", user);
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
         startActivity(intent);
         finish(); // Close the activity after update
     }

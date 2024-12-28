@@ -8,6 +8,7 @@
     android:background="@color/white"
     tools:context=".ui.ratingsystem.RateUs">
 
+<<<<<<< HEAD
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarRateUs"
         android:layout_width="match_parent"
@@ -15,6 +16,14 @@
         android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
+=======
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Rate Us" />
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -33,6 +42,7 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+<<<<<<< HEAD
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -168,4 +178,6 @@
 
     </RelativeLayout>
 
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 </RelativeLayout>
